@@ -13,5 +13,9 @@ defmodule GenderizeTest do
     test "will work for unknown names" do
       assert Genderize.find("asdf") == {:unknown, nil}
     end
+
+    test "will work for non-binary names" do
+      assert Genderize.find(nil) == {:unknown, nil}
+    end
   end
 end

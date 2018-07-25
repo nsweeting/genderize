@@ -36,11 +36,15 @@ defmodule Genderize do
       # => {:unknown, nil}
   """
   @spec find(name :: binary) :: {gender, probability}
-  def find(name) do
+  def find(name) when is_binary(name) do
     case :ets.lookup(:genderize, String.downcase(name)) do
       [{_, {gender, probability}}] -> {gender, probability}
       [] -> {:unknown, nil}
     end
+  end
+
+  def find(_name) do
+    {:unknown, nil}
   end
 
   # Application Callbacks
