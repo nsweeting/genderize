@@ -29,7 +29,7 @@ defmodule Genderize do
 
   ## Example
       Genderize.find("mary")
-      # => {:male, 1.0}
+      # => {:female, 1.0}
       Genderize.find("john")
       # => {:male, 1.0}
       Genderize.find("asdf")

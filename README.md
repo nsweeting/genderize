@@ -20,7 +20,7 @@ Using `genderize` is easy:
 
 ```elixir
 Genderize.find("mary")
-# => {:male, 1.0}
+# => {:female, 1.0}
 Genderize.find("john")
 # => {:male, 1.0}
 Genderize.find("asdf")
